@@ -34,7 +34,7 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 ### Tecnologia
 
 * Java: versão 11
-* Cucumber: versão 
+* Cucumber: versão 6.10.4
 * Selenium: versao 3.141.59
 * Junit: versão 4.13.2
 * WebDriverManager: versão 4.4.3
@@ -77,4 +77,3 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 ### Licença
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
-
