@@ -41,6 +41,7 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 * Maven: versão 3.8.1
 * Eclipse: versão 2021-06
 * Intellij: versão 2021.13
+* FreePlane: Mapa mental
 
 ### Código
 
