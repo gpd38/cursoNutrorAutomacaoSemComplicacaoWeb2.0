@@ -5,7 +5,7 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 <p align="center">
 	<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/gpd38/cursoNutrorAutomacaoSemComplicacaoWeb2.0?color=blue">
 	<img alt="GitHub" src="https://img.shields.io/github/license/gpd38/cursoNutrorAutomacaoSemComplicacaoWeb2.0?color=red">
-	<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/gpd38/cursoNutrorAutomacaoSemComplicacaoWeb2.0?color=orange">
+	<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/gpd38/cursoNutrorAutomacaoSemComplicacaoWeb2.0?color=green">
 </p>
 
 <p align="center">
@@ -77,3 +77,4 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 ### Licença
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
+
