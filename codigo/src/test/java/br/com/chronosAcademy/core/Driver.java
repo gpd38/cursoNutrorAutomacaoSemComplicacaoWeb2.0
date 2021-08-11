@@ -34,6 +34,7 @@ public class Driver {
                 driver = new InternetExplorerDriver();
                 break;
         }
+        
         wait = new WebDriverWait(driver,10);
         driver.manage().window().maximize();
     }

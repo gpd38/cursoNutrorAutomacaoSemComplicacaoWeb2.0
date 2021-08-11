@@ -46,7 +46,7 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 ### Código
 
 * [Eclipse](https://github.com/gpd38/cursoNutrorAutomacaoSemComplicacaoWeb2.0/tree/master/codigoEclipse)
-* [Intellij](https://github.com/gpd38/cursoNutrorAutomacaoSemComplicacaoWeb2.0/tree/master/codigoIntellij)
+* [Intellij](https://github.com/gpd38/cursoNutrorAutomacaoSemComplicacaoWeb2.0/tree/master/codigo)
 
 ### Autor
 
@@ -77,3 +77,4 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 ### Licença
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
+ENSE).
