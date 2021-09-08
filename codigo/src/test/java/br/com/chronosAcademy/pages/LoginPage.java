@@ -49,4 +49,6 @@ public class LoginPage {
     }
 
 
+    public void invisibilityOfBtnFechar() {
+    }
 }
