@@ -3,12 +3,12 @@ package br.com.chronosAcademy.media;
 import br.com.chronosAcademy.Media;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class MediaTest {
 
     @Test
-    public void validaAprovado(){
+    public void validaAprovado() {
         double n1 = 5;
         double n2 = 5;
 
@@ -20,7 +20,7 @@ public class MediaTest {
     }
 
     @Test
-    public void validaReprovado(){
+    public void validaReprovado() {
         double n1 = 4.9;
         double n2 = 5;
 

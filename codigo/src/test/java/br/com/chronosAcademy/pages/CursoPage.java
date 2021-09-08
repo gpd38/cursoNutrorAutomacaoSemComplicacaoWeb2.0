@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class CursoPage {
-    private WebDriver driver;
-    private CursoMap cursoMap;
+    private final WebDriver driver;
+    private final CursoMap cursoMap;
 
     public CursoPage(WebDriver driver) {
         this.driver = driver;

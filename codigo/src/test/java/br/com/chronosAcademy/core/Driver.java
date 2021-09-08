@@ -1,4 +1,5 @@
 package br.com.chronosAcademy.core;
+
 import br.com.chronosAcademy.enums.Browser;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -14,9 +15,9 @@ public class Driver {
     private static WebDriver driver;
     private static WebDriverWait wait;
 
-    public Driver(Browser navegador){
+    public Driver(Browser navegador) {
 
-        switch (navegador){
+        switch (navegador) {
             case CHROME:
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
@@ -43,15 +44,15 @@ public class Driver {
         return driver;
     }
 
-    public static void visibilityOf(WebElement element){
+    public static void visibilityOf(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public static void invisibilityOf(WebElement element){
+    public static void invisibilityOf(WebElement element) {
         wait.until(ExpectedConditions.invisibilityOf(element));
     }
 
-    public static void attributeChange(WebElement element, String attribute, String value){
+    public static void attributeChange(WebElement element, String attribute, String value) {
         wait.until(ExpectedConditions.attributeContains(element, attribute, value));
     }
 

@@ -1,11 +1,12 @@
 package br.com.chronosAcademy.pages;
+
 import br.com.chronosAcademy.maps.PrincipalMap;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class PrincipalPage {
-    private WebDriver driver;
-    private PrincipalMap principalMap;
+    private final WebDriver driver;
+    private final PrincipalMap principalMap;
 
     public PrincipalPage(WebDriver driver) {
         this.driver = driver;

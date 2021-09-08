@@ -19,12 +19,12 @@ public class LoginSteps {
     String username;
 
     @Before
-    public void iniciaNavegador(){
+    public void iniciaNavegador() {
         new Driver(Browser.CHROME);
     }
 
     @After
-    public void fechaNavegador(){
+    public void fechaNavegador() {
         Driver.getDriver().quit();
     }
 
@@ -36,19 +36,19 @@ public class LoginSteps {
         loginPage.visibilityOfBtnFechar();
         loginPage.aguardaLoader();
     }
+
     @Quando("for realizado um clique fora da modal")
     public void forRealizadoUmCliqueForaDaModal() {
         loginPage.clickDivFechaModal();
     }
+
     @Entao("a janela modal deve ser fechada")
     public void aJanelaModalDeveSerFechada() throws Exception {
         try {
             loginPage.invisibilityOfBtnFechar();
-        } catch (Exception e){
+        } catch (Exception e) {
             throw new Exception("A janela modal não foi fechada");
         }
-
-
 
 
     }
@@ -82,9 +82,6 @@ public class LoginSteps {
         if (remember) loginPage.clickInpRemember();
 
 
-
-
-
     }
 
     @Quando("for realizado o clique no botao sign in")
@@ -99,7 +96,7 @@ public class LoginSteps {
 
     @Entao("o sistema devera exibir uma mensagem de erro")
     public void oSistemaDeveraExibirUmaMensagemDeErro() {
-        Assert.assertEquals("Incorrect user name or password.",loginPage.getErroLogin());
+        Assert.assertEquals("Incorrect user name or password.", loginPage.getErroLogin());
     }
 
     @Entao("o botao sign in deve permanecer desabilitado")

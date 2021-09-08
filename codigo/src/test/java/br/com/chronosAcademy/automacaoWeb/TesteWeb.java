@@ -18,7 +18,7 @@ public class TesteWeb {
     CursoPage cursoPage;
 
     @Before
-    public void inicializaTeste(){
+    public void inicializaTeste() {
         driverWeb = new Driver(Browser.CHROME);
         driver = Driver.getDriver();
 
@@ -27,7 +27,7 @@ public class TesteWeb {
     }
 
     // @Test
-    public void primeiroTeste(){
+    public void primeiroTeste() {
 
         String titulo = principalPage.getTitulo();
 
@@ -35,7 +35,7 @@ public class TesteWeb {
     }
 
     // @Test
-    public void segundoTeste(){
+    public void segundoTeste() {
         principalPage.clickBotao();
         cursoPage = new CursoPage(driver);
         String titulo = cursoPage.getTitulo2();
@@ -44,7 +44,7 @@ public class TesteWeb {
     }
 
     @After
-    public void finalizaTeste(){
+    public void finalizaTeste() {
         driver.quit();
     }
 
