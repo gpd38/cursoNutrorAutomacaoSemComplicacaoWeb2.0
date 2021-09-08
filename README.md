@@ -26,7 +26,9 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 | Aula 07 | Aula 08 | Aula 09 | Aula 10 | Aula 11 | Aula 12 |
 | Início da Automação de Testes | Anotações JUnit | Xpath e CSS Selector | Design Pattern | Page Objects | PageFactory e Revisão |
 | Aula 13 | Aula 14 | Aula 15 | Aula 16 | Aula 17 | Aula 18 |
-| Mapa Mental | Ghekin | Cucumber | Runner | Maps e Page | 10/08 |
+| Mapa Mental | Ghekin | Cucumber | Runner | Maps e Page | Enum e CSS Selector |
+| Aula 19 | Aula 20 | Aula 21 | Aula 22 | Aula 23 | Aula 24 |
+| Loader Falso Positivo | Massa de Dados | Reports Jenkins | Jenkins Funcionando | 09/09 | 14/09 |
 |||||||
 
 * Aula Extra: Entrando na área de automação de testes
@@ -42,6 +44,7 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 * Eclipse: versão 2021-06
 * Intellij: versão 2021.13
 * FreePlane: Mapa mental
+* Jenkins: versão 2.309
 
 ### Código
 
