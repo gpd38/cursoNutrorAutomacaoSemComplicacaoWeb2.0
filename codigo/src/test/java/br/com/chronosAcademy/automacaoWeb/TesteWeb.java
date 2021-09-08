@@ -4,13 +4,9 @@ import br.com.chronosAcademy.core.Driver;
 import br.com.chronosAcademy.enums.Browser;
 import br.com.chronosAcademy.pages.CursoPage;
 import br.com.chronosAcademy.pages.PrincipalPage;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import static org.junit.Assert.assertEquals;
 
@@ -30,7 +26,7 @@ public class TesteWeb {
         principalPage = new PrincipalPage(driver);
     }
 
-    @Test
+    // @Test
     public void primeiroTeste(){
 
         String titulo = principalPage.getTitulo();
@@ -38,7 +34,7 @@ public class TesteWeb {
         assertEquals("Porque Tempo É Conhecimento", titulo);
     }
 
-    @Test
+    // @Test
     public void segundoTeste(){
         principalPage.clickBotao();
         cursoPage = new CursoPage(driver);
