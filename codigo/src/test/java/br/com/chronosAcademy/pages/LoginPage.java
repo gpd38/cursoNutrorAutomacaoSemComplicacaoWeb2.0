@@ -8,11 +8,13 @@ public class LoginPage {
     LoginMap loginMap;
 
     public LoginPage() {
-       loginMap = new LoginMap();
+        loginMap = new LoginMap();
         PageFactory.initElements(Driver.getDriver(), loginMap);
     }
 
     public void clickBtnLogin(){
+        Driver.visibilityOf(loginMap.btnLogin);
+
         loginMap.btnLogin.click();
     }
 
@@ -25,11 +27,16 @@ public class LoginPage {
     }
 
     public void setInpUserName(String username){
-        loginMap.inpUserName.sendKeys(username);
+        if(username != null){
+            loginMap.inpUserName.sendKeys(username);
+        }
+
     }
 
     public void setInpPassword(String password){
-        loginMap.inpPassword.sendKeys(password);
+        if (password != null){
+            loginMap.inpPassword.sendKeys(password);
+        }
     }
 
     public void clickInpRemember(){
@@ -48,7 +55,17 @@ public class LoginPage {
         return loginMap.btnSignIn.isEnabled();
     }
 
-
-    public void invisibilityOfBtnFechar() {
+    public void visibilityOfBtnFechar(){
+        Driver.visibilityOf(loginMap.btnFechar);
     }
+
+    public void invisibilityOfBtnFechar(){
+        Driver.invisibilityOf(loginMap.btnFechar);
+    }
+
+    public void aguardaLoader(){
+        Driver.attributeChange(loginMap.divLoader, "display", "none");
+    }
+
+
 }
