@@ -29,6 +29,6 @@ hs_err_pid*
 codigoEclipse/.settings/
 
 #Intellij
-/codigo/.idea
-/codigo/target
-/codigo/*.iml
+/codigoIntellij/.idea/
+/codigoIntellij/target
+/codigoIntellij/*.iml
