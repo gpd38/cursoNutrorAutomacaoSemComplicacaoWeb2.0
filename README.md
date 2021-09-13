@@ -1,6 +1,6 @@
 # Curso Nutror Automacao Sem Complicacao Web 2.0
 
-Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar automação web utilizando a linguagem java.
+Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar automação web utilizando a linguagem java e gherkin.
 
 <p align="center">
 	<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/gpd38/cursoNutrorAutomacaoSemComplicacaoWeb2.0?color=blue">
@@ -26,13 +26,13 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 | Aula 07 | Aula 08 | Aula 09 | Aula 10 | Aula 11 | Aula 12 |
 | Início da Automação de Testes | Anotações JUnit | Xpath e CSS Selector | Design Pattern | Page Objects | PageFactory e Revisão |
 | Aula 13 | Aula 14 | Aula 15 | Aula 16 | Aula 17 | Aula 18 |
-| Mapa Mental | Ghekin | Cucumber | Runner | Maps e Page | Enum e CSS Selector |
+| Mapa Mental | Gherkin | Cucumber | Runner | Maps e Page | Enum e CSS Selector |
 | Aula 19 | Aula 20 | Aula 21 | Aula 22 | Aula 23 | Aula 24 |
-| Loader Falso Positivo | Massa de Dados | Reports Jenkins | Jenkins Funcionando | 09/09 | 14/09 |
+| Loader Falso Positivo | Massa de Dados | Reports Jenkins | Jenkins Funcionando | Diretório e print | 14/09 |
 |||||||
 
 * Aula Extra: Entrando na área de automação de testes
-
+//mvn install -Dcucumber.filter.tag="@loginComSucesso"
 ### Tecnologia
 
 * Java: versão 11
@@ -49,7 +49,7 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 ### Código
 
 * [Eclipse](https://github.com/gpd38/cursoNutrorAutomacaoSemComplicacaoWeb2.0/tree/master/codigoEclipse)
-* [Intellij](https://github.com/gpd38/cursoNutrorAutomacaoSemComplicacaoWeb2.0/tree/master/codigo)
+* [Intellij](https://github.com/gpd38/cursoNutrorAutomacaoSemComplicacaoWeb2.0/tree/main/codigoIntellij)
 
 ### Autor
 
@@ -75,7 +75,7 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 
 ### Certificado
 
-
+... Curso em andamento ...
 
 ### Licença
 
