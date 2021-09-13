@@ -32,7 +32,7 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 |||||||
 
 * Aula Extra: Entrando na área de automação de testes
-//mvn install -Dcucumber.filter.tag="@loginComSucesso"
+
 ### Tecnologia
 
 * Java: versão 11

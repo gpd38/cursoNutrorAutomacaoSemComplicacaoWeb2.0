@@ -6,11 +6,13 @@ import br.com.chronosAcademy.pages.LoginPage;
 import br.com.chronosAcademy.pages.NewAccountPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import org.junit.Assert;
 
+import java.io.IOException;
 import java.util.Map;
 
 public class LoginSteps {
@@ -19,36 +21,41 @@ public class LoginSteps {
     String username;
 
     @Before
-    public void iniciaNavegador() {
+    public void iniciaNavegador(Scenario cenario){
         new Driver(Browser.CHROME);
+        Driver.setNomeCenario(cenario.getName());
+        Driver.criaDiretorio();
     }
 
     @After
-    public void fechaNavegador() {
+    public void fechaNavegador(Scenario cenario){
         Driver.getDriver().quit();
+        System.out.println(Driver.getNomeCenario()+" - " + cenario.getStatus());
+        System.out.println(cenario.isFailed());
     }
 
     @Dado("que a modal esteja sendo exibida")
-    public void queAModalEstejaSendoExibida() {
+    public void queAModalEstejaSendoExibida() throws IOException {
         Driver.getDriver().get("https://www.advantageonlineshopping.com/");
         loginPage = new LoginPage();
         loginPage.clickBtnLogin();
         loginPage.visibilityOfBtnFechar();
         loginPage.aguardaLoader();
-    }
 
+    }
     @Quando("for realizado um clique fora da modal")
     public void forRealizadoUmCliqueForaDaModal() {
         loginPage.clickDivFechaModal();
     }
-
     @Entao("a janela modal deve ser fechada")
     public void aJanelaModalDeveSerFechada() throws Exception {
         try {
             loginPage.invisibilityOfBtnFechar();
-        } catch (Exception e) {
+        } catch (Exception e){
             throw new Exception("A janela modal não foi fechada");
         }
+
+
 
 
     }
@@ -80,8 +87,6 @@ public class LoginSteps {
         loginPage.setInpPassword(password);
 
         if (remember) loginPage.clickInpRemember();
-
-
     }
 
     @Quando("for realizado o clique no botao sign in")
@@ -90,18 +95,21 @@ public class LoginSteps {
     }
 
     @Entao("deve ser possivel logar no sistema")
-    public void deveSerPossivelLogarNoSistema() {
+    public void deveSerPossivelLogarNoSistema() throws IOException {
+        Driver.printScreen(getClass().getName());
         Assert.assertEquals(username, loginPage.getTextLogado());
     }
 
     @Entao("o sistema devera exibir uma mensagem de erro")
-    public void oSistemaDeveraExibirUmaMensagemDeErro() {
-        Assert.assertEquals("Incorrect user name or password.", loginPage.getErroLogin());
+    public void oSistemaDeveraExibirUmaMensagemDeErro() throws IOException {
+        Driver.printScreen(getClass().getName());
+        Assert.assertEquals("Incorrect user name or password.",loginPage.getErroLogin());
     }
 
     @Entao("o botao sign in deve permanecer desabilitado")
-    public void oBotaoSignInDevePermanecerDesabilitado() {
+    public void oBotaoSignInDevePermanecerDesabilitado() throws IOException {
         boolean enabled = loginPage.isBtnSignIn();
+        Driver.printScreen(getClass().getName());
         Assert.assertFalse(enabled);
     }
 }

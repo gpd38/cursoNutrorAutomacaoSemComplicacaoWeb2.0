@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9511037100,
+              "duration": 6403185000,
               "status": "passed"
             },
             "line": 6,
@@ -24,30 +24,30 @@
         ]
       },
       {
-        "start_timestamp": "2021-09-08T03:07:59.261Z",
+        "start_timestamp": "2021-09-13T01:49:59.796Z",
         "before": [
           {
             "result": {
-              "duration": 11342973100,
+              "duration": 6014994700,
               "status": "passed"
             },
             "match": {
-              "location": "br.com.chronosAcademy.steps.LoginSteps.iniciaNavegador()"
+              "location": "br.com.chronosAcademy.steps.LoginSteps.iniciaNavegador(io.cucumber.java.Scenario)"
             }
           }
         ],
-        "line": 33,
+        "line": 29,
         "name": "Realizar login com campos obrigatórios",
         "description": "",
         "id": "login;realizar-login-\u003cidentificacao\u003e;;2",
         "after": [
           {
             "result": {
-              "duration": 970622700,
+              "duration": 1335058300,
               "status": "passed"
             },
             "match": {
-              "location": "br.com.chronosAcademy.steps.LoginSteps.fechaNavegador()"
+              "location": "br.com.chronosAcademy.steps.LoginSteps.fechaNavegador(io.cucumber.java.Scenario)"
             }
           }
         ],
@@ -56,10 +56,10 @@
         "steps": [
           {
             "result": {
-              "duration": 342998300,
+              "duration": 399006500,
               "status": "passed"
             },
-            "line": 25,
+            "line": 21,
             "name": "os campos de login forem preenchidos com os valores",
             "match": {
               "location": "br.com.chronosAcademy.steps.LoginSteps.osCamposDeLoginForemPreenchidosComOsValores(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
@@ -68,7 +68,7 @@
               {
                 "cells": [
                   "usuario",
-                  "chronos"
+                  "erro"
                 ]
               },
               {
@@ -88,10 +88,10 @@
           },
           {
             "result": {
-              "duration": 126001600,
+              "duration": 148998800,
               "status": "passed"
             },
-            "line": 29,
+            "line": 25,
             "name": "for realizado o clique no botao sign in",
             "match": {
               "location": "br.com.chronosAcademy.steps.LoginSteps.forRealizadoOCliqueNoBotaoSignIn()"
@@ -100,10 +100,11 @@
           },
           {
             "result": {
-              "duration": 6933994800,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (8e929b3beeb937327c70f8f2763ea189)] -\u003e css selector: .containMiniTitle] (tried for 10 second(s) with 500 milliseconds interval)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-DVUTQTI\u0027, ip: \u0027192.168.0.4\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.12\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\\Users\\gusta\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:30367}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 8e929b3beeb937327c70f8f2763ea189\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\r\n\tat br.com.chronosAcademy.core.Driver.visibilityOf(Driver.java:95)\r\n\tat br.com.chronosAcademy.pages.LoginPage.getTextLogado(LoginPage.java:71)\r\n\tat br.com.chronosAcademy.steps.LoginSteps.deveSerPossivelLogarNoSistema(LoginSteps.java:100)\r\n\tat ✽.deve ser possivel logar no sistema(file:///D:/2021-github/pessoal/cursoNutrorAutomacaoSemComplicacaoWeb2.0/codigoIntellij/src/test/resources/features/login.feature:26)\r\n",
+              "duration": 11194966700,
+              "status": "failed"
             },
-            "line": 30,
+            "line": 26,
             "name": "deve ser possivel logar no sistema",
             "match": {
               "location": "br.com.chronosAcademy.steps.LoginSteps.deveSerPossivelLogarNoSistema()"
@@ -129,7 +130,7 @@
         "steps": [
           {
             "result": {
-              "duration": 10818850800,
+              "duration": 7223625200,
               "status": "passed"
             },
             "line": 6,
@@ -142,30 +143,30 @@
         ]
       },
       {
-        "start_timestamp": "2021-09-08T03:08:28.800Z",
+        "start_timestamp": "2021-09-13T01:50:25.648Z",
         "before": [
           {
             "result": {
-              "duration": 2725886200,
+              "duration": 2845742000,
               "status": "passed"
             },
             "match": {
-              "location": "br.com.chronosAcademy.steps.LoginSteps.iniciaNavegador()"
+              "location": "br.com.chronosAcademy.steps.LoginSteps.iniciaNavegador(io.cucumber.java.Scenario)"
             }
           }
         ],
-        "line": 34,
+        "line": 30,
         "name": "Realizar login todos os campos",
         "description": "",
         "id": "login;realizar-login-\u003cidentificacao\u003e;;3",
         "after": [
           {
             "result": {
-              "duration": 991493700,
+              "duration": 1569000200,
               "status": "passed"
             },
             "match": {
-              "location": "br.com.chronosAcademy.steps.LoginSteps.fechaNavegador()"
+              "location": "br.com.chronosAcademy.steps.LoginSteps.fechaNavegador(io.cucumber.java.Scenario)"
             }
           }
         ],
@@ -174,10 +175,10 @@
         "steps": [
           {
             "result": {
-              "duration": 477005900,
+              "duration": 518001500,
               "status": "passed"
             },
-            "line": 25,
+            "line": 21,
             "name": "os campos de login forem preenchidos com os valores",
             "match": {
               "location": "br.com.chronosAcademy.steps.LoginSteps.osCamposDeLoginForemPreenchidosComOsValores(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
@@ -206,10 +207,10 @@
           },
           {
             "result": {
-              "duration": 136000600,
+              "duration": 122999200,
               "status": "passed"
             },
-            "line": 29,
+            "line": 25,
             "name": "for realizado o clique no botao sign in",
             "match": {
               "location": "br.com.chronosAcademy.steps.LoginSteps.forRealizadoOCliqueNoBotaoSignIn()"
@@ -218,11 +219,11 @@
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (6864b1d0473812eb84ae3249d067106b)] -\u003e css selector: .containMiniTitle] (tried for 10 second(s) with 500 milliseconds interval)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-DVUTQTI\u0027, ip: \u0027172.17.32.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.12\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.15 (660fc11082ba5..., userDataDir: C:\\Users\\gusta\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:1137}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 6864b1d0473812eb84ae3249d067106b\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\r\n\tat br.com.chronosAcademy.core.Driver.visibilityOf(Driver.java:48)\r\n\tat br.com.chronosAcademy.pages.LoginPage.getTextLogado(LoginPage.java:71)\r\n\tat br.com.chronosAcademy.steps.LoginSteps.deveSerPossivelLogarNoSistema(LoginSteps.java:94)\r\n\tat ✽.deve ser possivel logar no sistema(file:///D:/2021-github/pessoal/cursoNutrorAutomacaoSemComplicacaoWeb2.0/codigo/src/test/resources/features/login.feature:30)\r\n",
-              "duration": 10261774900,
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (6e0a2c17f21a8ca5f9ba075c9ba577b8)] -\u003e css selector: .containMiniTitle] (tried for 10 second(s) with 500 milliseconds interval)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-DVUTQTI\u0027, ip: \u0027192.168.0.4\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.12\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\\Users\\gusta\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:2938}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 6e0a2c17f21a8ca5f9ba075c9ba577b8\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\r\n\tat br.com.chronosAcademy.core.Driver.visibilityOf(Driver.java:95)\r\n\tat br.com.chronosAcademy.pages.LoginPage.getTextLogado(LoginPage.java:71)\r\n\tat br.com.chronosAcademy.steps.LoginSteps.deveSerPossivelLogarNoSistema(LoginSteps.java:100)\r\n\tat ✽.deve ser possivel logar no sistema(file:///D:/2021-github/pessoal/cursoNutrorAutomacaoSemComplicacaoWeb2.0/codigoIntellij/src/test/resources/features/login.feature:26)\r\n",
+              "duration": 10871944300,
               "status": "failed"
             },
-            "line": 30,
+            "line": 26,
             "name": "deve ser possivel logar no sistema",
             "match": {
               "location": "br.com.chronosAcademy.steps.LoginSteps.deveSerPossivelLogarNoSistema()"
