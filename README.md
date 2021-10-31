@@ -28,7 +28,9 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 | Aula 13 | Aula 14 | Aula 15 | Aula 16 | Aula 17 | Aula 18 |
 | Mapa Mental | Gherkin | Cucumber | Runner | Maps e Page | Enum e CSS Selector |
 | Aula 19 | Aula 20 | Aula 21 | Aula 22 | Aula 23 | Aula 24 |
-| Loader Falso Positivo | Massa de Dados | Reports Jenkins | Jenkins Funcionando | Diretório e print | 14/09 |
+| Loader Falso Positivo | Massa de Dados | Reports Jenkins | Jenkins Funcionando | Diretório e print | Print e Headless |
+| Aula 25 | Aula 26 | Aula 27 | Aula 28 | | |
+| CRUD | CRUD Cadastro e login | CRUD Maps e Pages | CRUD Gherkin, update e delete | | |
 |||||||
 
 * Aula Extra: Entrando na área de automação de testes
@@ -75,7 +77,7 @@ Curso ministrado pelo instrutor Adam Vinicius com o intuito de ensinar e treinar
 
 ### Certificado
 
-... Curso em andamento ...
+![Automação Sem Complicação Web 2.0](https://github.com/gpd38/cursoNutrorAutomacaoSemComplicacaoWeb2.0/blob/main/img/certificadoconclusaocurso.png)
 
 ### Licença
 
