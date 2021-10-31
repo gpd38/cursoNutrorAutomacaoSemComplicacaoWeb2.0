@@ -3,22 +3,18 @@ package br.com.chronosAcademy.core;
 import br.com.chronosAcademy.enums.Browser;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Driver {
     private static WebDriver driver;
@@ -26,13 +22,6 @@ public class Driver {
     private static String nomeCenario;
     private static File diretorio;
     private static int numPrint;
-
-    public static String getNowDate() {
-        String mask = "yyyy-MM-dd_HH-mm-ss";
-        DateFormat dateFormat = new SimpleDateFormat(mask);
-        Date date = new Date();
-        return dateFormat.format(date);
-    }
 
     public static File getDiretorio() {
         return diretorio;
@@ -48,16 +37,15 @@ public class Driver {
 
     public static void criaDiretorio(){
         String caminho = "src/test/resources/evidencias";
-        diretorio = new File(caminho+"/"+nomeCenario+getNowDate());
+        diretorio = new File(caminho+"/"+nomeCenario);
         diretorio.mkdir();
         numPrint = 0;
-
     }
 
     public static void printScreen(String passo) throws IOException {
         numPrint++;
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        String caminho = diretorio.getPath()+"/"+passo+".png";
+        String caminho = diretorio.getPath()+"/"+numPrint+" - "+passo+".png";
         FileUtils.copyFile(file, new File(caminho));
 
     }
@@ -66,25 +54,47 @@ public class Driver {
 
         switch (navegador){
             case CHROME:
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                startChrome();
                 break;
             case FIREFOX:
-                WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
+                startFirefox();
                 break;
             case EDGE:
-                WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver();
+                startEdge();
                 break;
             case IE:
-                WebDriverManager.iedriver().setup();
-                driver = new InternetExplorerDriver();
+                startIE();
                 break;
         }
 
         wait = new WebDriverWait(driver, 10);
         driver.manage().window().maximize();
+    }
+
+    private void startIE() {
+        WebDriverManager.iedriver().setup();
+        driver = new InternetExplorerDriver();
+    }
+
+    private void startEdge() {
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver();
+    }
+
+    private void startFirefox() {
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
+    }
+
+    private void startChrome() {
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions chromeOptions = new ChromeOptions();
+
+        boolean headless = Boolean.parseBoolean(System.getProperty("headless"));
+        chromeOptions.setHeadless(headless);
+
+        driver = new ChromeDriver(chromeOptions);
+        driver.manage().window().setSize(new Dimension(1280, 720));
     }
 
     public static WebDriver getDriver() {
@@ -93,6 +103,7 @@ public class Driver {
 
     public static void visibilityOf(WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));
+
     }
 
     public static void invisibilityOf(WebElement element){
@@ -103,4 +114,16 @@ public class Driver {
         wait.until(ExpectedConditions.attributeContains(element, attribute, value));
     }
 
+    public static void aguardaOptions(Select select){
+        for (int i =0; i < 6; i++){
+            if(select.getOptions().size() > 1){
+                return;
+            }
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+
+            }
+        }
+    }
 }
