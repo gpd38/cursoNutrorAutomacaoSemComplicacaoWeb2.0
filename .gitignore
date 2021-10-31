@@ -32,4 +32,4 @@ codigoEclipse/.settings/
 /codigoIntellij/.idea/
 /codigoIntellij/target
 /codigoIntellij/*.iml
-src/test/resources/evidencias/*/*.png
+codigoIntellij/src/test/resources/evidencias/*/*.png
