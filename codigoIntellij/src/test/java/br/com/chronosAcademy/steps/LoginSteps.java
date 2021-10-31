@@ -28,20 +28,22 @@ public class LoginSteps {
     }
 
     @After
-    public void fechaNavegador(Scenario cenario){
+    public void fechaNavegador(Scenario cenario) throws IOException {
+        if (cenario.isFailed()){
+            Driver.printScreen("erro no cenario");
+        }
+
         Driver.getDriver().quit();
-        System.out.println(Driver.getNomeCenario()+" - " + cenario.getStatus());
-        System.out.println(cenario.isFailed());
+
     }
 
     @Dado("que a modal esteja sendo exibida")
-    public void queAModalEstejaSendoExibida() throws IOException {
+    public void queAModalEstejaSendoExibida() {
         Driver.getDriver().get("https://www.advantageonlineshopping.com/");
         loginPage = new LoginPage();
         loginPage.clickBtnLogin();
         loginPage.visibilityOfBtnFechar();
         loginPage.aguardaLoader();
-
     }
     @Quando("for realizado um clique fora da modal")
     public void forRealizadoUmCliqueForaDaModal() {
@@ -78,7 +80,7 @@ public class LoginSteps {
     }
 
     @Quando("os campos de login forem preenchidos com os valores")
-    public void osCamposDeLoginForemPreenchidosComOsValores(Map<String, String> map) {
+    public void osCamposDeLoginForemPreenchidosComOsValores(Map<String, String> map) throws IOException {
         username = map.get("usuario");
         String password = map.get("senha");
         boolean remember = Boolean.parseBoolean(map.get("remember"));
@@ -87,6 +89,9 @@ public class LoginSteps {
         loginPage.setInpPassword(password);
 
         if (remember) loginPage.clickInpRemember();
+
+        Driver.printScreen("preenchimento dos campos de login");
+
     }
 
     @Quando("for realizado o clique no botao sign in")
@@ -96,20 +101,27 @@ public class LoginSteps {
 
     @Entao("deve ser possivel logar no sistema")
     public void deveSerPossivelLogarNoSistema() throws IOException {
-        Driver.printScreen(getClass().getName());
         Assert.assertEquals(username, loginPage.getTextLogado());
+        Driver.printScreen("logado no sistema");
     }
 
     @Entao("o sistema devera exibir uma mensagem de erro")
-    public void oSistemaDeveraExibirUmaMensagemDeErro() throws IOException {
-        Driver.printScreen(getClass().getName());
+    public void oSistemaDeveraExibirUmaMensagemDeErro() {
         Assert.assertEquals("Incorrect user name or password.",loginPage.getErroLogin());
     }
 
     @Entao("o botao sign in deve permanecer desabilitado")
-    public void oBotaoSignInDevePermanecerDesabilitado() throws IOException {
+    public void oBotaoSignInDevePermanecerDesabilitado() {
         boolean enabled = loginPage.isBtnSignIn();
-        Driver.printScreen(getClass().getName());
         Assert.assertFalse(enabled);
+    }
+
+    @Dado("que esteja logado no sistema com")
+    public void queEstejaLogadoNoSistemaCom(Map<String, String> map) throws IOException {
+        queAModalEstejaSendoExibida();
+        osCamposDeLoginForemPreenchidosComOsValores(map);
+        loginPage.clickBtnSignIn();
+        deveSerPossivelLogarNoSistema();
+
     }
 }

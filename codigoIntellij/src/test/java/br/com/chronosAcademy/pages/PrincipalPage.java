@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class PrincipalPage {
-    private final WebDriver driver;
-    private final PrincipalMap principalMap;
+    private WebDriver driver;
+    private PrincipalMap principalMap;
 
     public PrincipalPage(WebDriver driver) {
         this.driver = driver;
